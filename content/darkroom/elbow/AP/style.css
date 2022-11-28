@@ -1,0 +1,65 @@
+body {
+    background:black;
+}
+
+.canvas-container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+h4, h3, h5, p {
+    color: whitesmoke;
+    margin: 0em;
+    text-align: center;
+}
+
+#studyMode {
+    position: absolute;
+    top: 25%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width:110px;
+    font-family: 'Verdana';
+    font-weight: bolder;
+    padding: 15px 25px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(126, 124, 17);
+    background-color: rgb(255, 255, 0);
+    cursor: pointer;  
+    display: none;
+}
+#studyMode:hover {background-color: rgba(175, 175, 0);}
+#studyMode:active {
+    top: 26%;
+    box-shadow: 0 4px rgb(75, 74, 10);
+}
+
+#canvas1 {
+    position: absolute;
+
+    width: 900px;
+    height: 600px;
+    background: white;
+    border: 5px solid goldenrod;
+    border-radius: 3px;
+}
+
+#canvas2 {
+    position: absolute;
+
+    width: 900px;
+    height: 600px;
+    background: white;
+    z-index: -1;
+    display: none;
+}
+
+img{
+    display: none;
+}
