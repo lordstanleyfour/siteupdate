@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    background-image: url('assets/tile.png');
+}
+
+#title {
+    position: relative;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+    color:teal;
+    }
+
+#canvas1 {
+    border: 5px solid black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 2%);
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Changa', sans-serif;
+}
+
+#restart {
+    position: absolute;
+    top: 5.5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    min-width: 20%;
+    border: 4px double purple;
+    border-radius: 20px;
+    background-color: rgba(213, 32, 184, 0.9);
+    color: white;
+    font-size: large;
+    cursor:grab;
+}
+#restart:hover{
+    background-color: rgba(250, 32, 184, 1);
+}
+#restart:active{
+    background-color: rgba(59, 32, 213, 0.9);
+}
+
+#player, #layer1, #layer2, #layer3, #layer4, #layer5, #enemy_fly, #enemy_raven, #enemy_ghost, #enemy_plant, #enemy_spinner, #enemy_worm, #enemy_spider_big, #enemy_spider, #fire, #fire_blue, #fire_purple, #collisionAnimation, #lives, #power_meter {
+    display: none;
+}
+
+#controls {
+    border: 5px solid teal;
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%, 10%);
+}
+
+
