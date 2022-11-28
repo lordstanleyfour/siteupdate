@@ -1,0 +1,32 @@
+﻿/*#canvas {
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    background: palegoldenrod;
+    position: absolute;
+    /*top: 50%;
+    left 50%;*/
+    /*transform: translate(35%);/*with the top and left offset these numbers work as /50 and 35 on the laptop*/
+/*}*/
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 500px;
+}
+
+p {
+    text-align: center;
+    font-weight: bolder;
+    color: yellow;
+    font-size: 1rem;
+}
+
+body {
+    background-color: black;
+}
+
+#credits {
+    font-size: 0.3rem
+}
