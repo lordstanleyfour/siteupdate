@@ -1,0 +1,43 @@
+﻿/*#canvas {
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    background: palegoldenrod;
+    position: absolute;
+    /*top: 50%;
+    left 50%;*/
+    /*transform: translate(35%);/*with the top and left offset these numbers work as /50 and 35 on the laptop*/
+/*}*/
+canvas {
+    /*background: rgba(222, 189, 225);*/
+    color: black;
+    /*padding: 25px; */
+    border: 5px solid #428bca;
+    margin: auto;
+    display: block;
+    /*    width: 800px;
+    height: 500px;*/
+}
+#canvas1:hover {
+    cursor: crosshair;
+}
+
+h4 {
+    text-align: center;
+    font-size: 25px;
+}
+
+p {
+    text-align: center;
+    font-weight: bolder;
+    color: yellow;
+    font-size: 1rem;
+}
+
+body {
+    background-color: darkblue;
+}
+
+#credits {
+    font-size: 0.3rem
+}

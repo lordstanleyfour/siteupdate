@@ -1,0 +1,40 @@
+body {
+    background-color: cornsilk;
+
+}
+
+#ma {
+/*     background-color: aqua;
+ */    color:darkred;
+}
+
+#div1 {
+    border-style: groove;
+    border-color: blueviolet;
+    border-radius: 20px;
+    text-align:center;
+}
+
+#div2 {
+    max-height: 500px;
+    background: size 500px;
+    background-color: chartreuse;
+    border-color: blueviolet;
+    border-style: ridge;
+
+}
+
+#canvas1 {
+    /*position: absolute;*/
+    display:inline-flex;
+    max-width: 100%;
+    max-height: 100%;
+    border-color: black;
+    border-style: ridge;
+    background-image: url(cubicle.jpg);
+    background-size: 600px 500px;
+    /*left:50%;*/
+    /*top:50%;*/
+    transform: translate(0%, -100%);
+}
+
