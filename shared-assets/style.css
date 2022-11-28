@@ -1,0 +1,213 @@
+* { 
+    /* Universal selector, adds rules to all elements unless superceded */
+    box-sizing: border-box; 
+    cursor: url(/index_assets/phalanx.cur), auto;
+    --clr-footer: hsl(323 21% 16%);
+}
+*:active{
+    cursor: url(/index_assets/phalanxpress.cur), auto;
+}
+
+/*----------------------------------------------------------------------------*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: black;
+    max-width: 100%;
+}
+
+header {background-image: url(/index_assets/skull.gif);}
+nav {background: rgba(128, 128, 128, 0.75);}
+main {background: rgba(255, 165, 0, 0.75);}
+footer {background: var(--clr-footer);}
+
+body {
+    /* default display layout, should be optimised for smallest size */
+    display: grid;
+    grid-template-columns: 1.5em 1fr 4fr 1.5em;
+    grid-template-rows: 7.5em/*5*/ 1fr 3em; /*3em, changed for neon button*/
+    grid-template-areas: 
+        "header header header header"
+        ". nav main ."
+        ". footer footer ."
+}
+
+/*------------------------HEADER----------------------------------------------*/
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1 {
+    background-color: rgba(248, 224, 4, 0.95);
+    border:1px solid white;
+    border-radius: 5em;
+    flex: 1 1 auto /*only the text will resize*/;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+}
+
+header > img {
+    /*resize with window*/
+    max-width:100%;
+    max-height:100%;
+}
+
+/*--------------------------------NAVBAR------------------------------------*/
+
+nav > button {
+    display: block;
+    margin: auto;
+    background-color: rgba(235, 45, 45, 0.5);
+    border-left: 1px;
+    border-top: 1px;
+    outline: none;
+    transition: 0.3s;
+    padding: 10px 10px;
+}
+
+nav > button:hover {
+    background-color: rgb(202, 100, 77);
+}
+nav > button:active {
+    background-color: brown;
+}
+
+.tabimage{
+    /*attached to the tab buttons*/
+    height: 112.5px;
+    width: 150px;
+}
+
+.tablinks > span{
+    /*tab button text box*/
+    background-color: rgb(211, 224, 235);
+    white-space: pre;    
+    display: block;
+}
+
+/*----------------------MAIN CONTENT-------------------------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+}
+
+.defaultcontent > h4, .defaultcontent > h3, .defaultcontent > p{
+    padding: .5em 2em;
+    border:1px solid black;
+    border-radius: .5em;
+    background-color: rgb(230, 190, 105);
+    text-align: center;
+}
+.defaultcontent > h4 {
+    display: inline-block;
+}
+
+.defaultcontent > a {
+    background-color: grey;
+    padding: .5em .5em;
+    border: 2px solid black;
+    border-radius: .5em;
+    margin : 0 10%;
+}
+.defaultcontent > a:hover {
+    background-color: rgb(87, 86, 86);
+    box-shadow: 0.1em 0.1em 0.2em black;
+    color: white;
+}
+
+/*---------------------TAB CONTENT------------------------------*/
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent > h3 {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: .5em;
+    background-color: rgb(230, 190, 105);
+}
+
+.tabcontent > a, .tabcontent > button {
+    font-size: 1em;
+    background-color: grey;
+    padding: .5em .5em;
+    border: 2px solid black;
+    border-radius: .5em;
+}
+.tabcontent > a:hover {
+    background-color: rgb(87, 86, 86);
+    box-shadow: 0.1em 0.1em 0.2em black;
+    color: white;
+}
+
+.tabcontent > button {
+    transform: translateX(1em) translateY(-0.1em);
+    padding: .5em 2em;
+}
+.tabcontent > button:hover {
+    background-color: rgb(87, 86, 86);
+    box-shadow: 0.1em 0.1em 0.2em black;
+    color: white;
+}
+
+.tabcontent > img {
+    max-width: 60vw;
+}
+
+
+
+/*---------------ADJUSTMENTS FOR SMALL SCREEN---------------------------------*/
+
+@media only screen and (max-width: 601px /*change back to 480*/){
+    footer {display: none;}
+    body {
+        /* default display layout, should be optimised for smallest size */
+        grid-template-columns:1fr;
+        grid-template-rows: 5em 1fr 4fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+    }
+
+    header > h1 {
+        padding: 0;
+    }
+
+    nav > button {
+        display: inline-block;
+    }
+    .tabimage {
+        display: none;
+    }
+    .tabcontent > img {
+        display: none;
+    }
+
+}
+
+header{grid-area: header;}
+nav{grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+/*-------------------------------------------------------------------------------*/
+
+#canvas1 {
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(2px) contrast(10);
+}

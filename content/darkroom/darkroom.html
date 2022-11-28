@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Interactive learning resources and games for radiography students and qualified radiographers.  Radiology themed quizzes and javascript games.">
+		<link rel="stylesheet" href="/shared-assets/style.css">
+		<title>Uncle Steve's Arsing About Emporioum</title>
+    </head>
+
+    <body>
+
+        <header>
+            <!-- Put the banner and logo in here -->
+            <h1>THE</h1>
+            <h1>RAD</h1>
+            <h1>LAD</h1>
+            <img id="logo" src="/index_assets/logo.png" alt="the rad lad logo" onclick="closeTab(event)">
+
+        </header>
+
+        <nav>
+            <!-- Tab boxes go here -->
+            <button class="tablinks" onclick="openTab(event, 'Tab1')"><img class="tabimage" src="/index_assets/darkroom.png"><span>  The Darkroom  </span></button>
+            <button class="tablinks" onclick="openTab(event, 'Tab2')"><img class="tabimage" src="/index_assets/breakroom.png"><span>  The Break Room  </span></button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')"><img class="tabimage" src="/index_assets/library.png"><span>  The Library  </span></button>
+            <button class="tablinks" onclick="openTab(event, 'Tab4')"><img class="tabimage" src="/index_assets/mailroom.png"><span>  The Mail Room  </span></button>
+            <button class="tablinks" onclick="openTab(event, 'Tab5')"><img class="tabimage" src="/index_assets/cupboard.png"><span>  The Cupboard  </span></button>
+
+        </nav>
+
+
+        <main>
+            <!-- This is the main page block to display all content -->
+            <div class="defaultcontent">
+                <h3>The Darkroom</h3>
+                <p style="visibility:hidden;"><!--empty space--></p>
+                <h4>Anatomy Challenges</h4>
+                <p style="text-align: left;">Start with learning mode to learn to recognise the bony anatomy on the projection of your choice, then progress to study mode to test what you have learned.</p>
+                <ul>
+                    <li>dsdsd</li>
+                    <li>dsdsd</li>
+                </ul>
+                                
+            </div>
+
+            <div id="Tab1" class="tabcontent">
+                <h3>The Darkroom</h3>
+                <h4>Interactive learning resources</h4>
+                <p>Learn bony anatomy from X-ray images - hover over the bones to display the names in learning mode, then test your knowledge and retention in study mode.</p>
+                <img id="darkroomimage" src="/index_assets/darkroomimage.jpg">
+                <p><!--empty to push down anchor when img displayed--></p>
+                <a href="/content/darkroom/darkroom.html">Enter the Darkroom</a>
+                <button onclick="closeTab(event)">Back</button>
+                <p>Planned content:</p>
+                <li>Quiz game</li>
+                <li>Spot the effusion</li>
+            </div>
+
+            <div id="Tab2" class="tabcontent">
+                <h3>The Breakroom</h3>
+                <p>Browser games, some radiology themed, some animal themed, some so vile that you'll wonder whether you'll be on a list afterwards.</p>
+                <p>(Spoiler - you will be.  The COOL PEOPLE list!)</p>
+                <img id="breakroomimage" src="/index_assets/breakroomimage.jpg">
+                <p><!--empty to push down anchor when img displayed--></p>
+                <a href="/content/breakroom/breakroom.html">Enter the Beakroom</a>
+                <button onclick="closeTab(event)">Back</button>
+            </div>
+
+            <div id="Tab3" class="tabcontent">
+                <h3>The Library</h3>
+                <p>Useful reading materials.  Chances are, if you end up in here, you're both well clever and extremely good-looking.  Probably also with great hair.</p>
+                <p><!--empty to push down anchor when img displayed--></p>
+                <a href="/content/library/library.html">Enter the Library</a>
+                <button onclick="closeTab(event)">Back</button>
+                <p>Planned content:</p>
+                <li>Pre-reporting session reading</li>
+                <li>External link list for other radiology resources</li>
+            </div>
+
+            <div id="Tab4" class="tabcontent">
+                <h3>The Mail Room</h3>
+                <p>Get in touch.  Ideas for future projects, feedback, bug reports and complaints about life are all welcome.</p>
+                <p>I set up a special e-mail and everything, go ahead and make it worthwhile.</p>
+                <p><!--empty to push down anchor when img displayed--></p>
+                <a href="/content/mailroom/mailrooom.html">Enter the Mail Room</a>
+                <button onclick="closeTab(event)">Back</button>
+            </div>
+
+            <div id="Tab5" class="tabcontent">
+                <h3>The Cupboard</h3>
+                <p>A nice little cubby to store works in progress, as well as things which aren't useful but would be too emotionally crippling to throw away.</p>
+                <p><!--empty to push down anchor when img displayed--></p>
+                <a href="/content/cupboard/cupboard.html">Enter the Cupboard</a>
+                <button onclick="closeTab(event)">Back</button>
+            </div>
+
+        </main>
+
+
+        <footer>
+            <p>This is a footer which contains niche information few give any hint of a shit about</p>
+        </footer>   
+
+        <canvas id="canvas1"></canvas>
+        <script src="/shared-assets/rainbowtrail.js"></script>
+        <script src="/shared-assets/tabcontrols.js"></script>
+
+    </body>
+    
+</html>

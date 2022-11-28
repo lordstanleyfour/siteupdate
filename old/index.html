@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Interactive learning resources and games for radiography students and qualified radiographers.  Radiology themed quizzes and javascript games.">
+		<link rel="stylesheet" href="style.css">
+		<title>Uncle Steve's Arsing About Emporioum</title>
+    </head>
+
+    <body>        
+        <div class="container">
+
+            <div class="logo">
+                <img id="logo" src="index_assets/logo.png" onclick="closeTab(event)">
+                <p>Home</p>
+            </div>
+
+            <div class="header">
+                <div class="headertext">
+                    <div class="headerwords">THE</div>
+                    <div class="headerwords">RAD</div>
+                    <div class="headerwords">LAD</div>                    
+                </div>
+                
+            </div>
+
+            <div class="tabmenu">
+                <button class="tablinks" onclick="openTab(event, 'Tab1')"><img class="tabimage" src="index_assets/darkroom.png"><span>  The Darkroom  </span></button>
+                <button class="tablinks" onclick="openTab(event, 'Tab2')"><img class="tabimage" src="index_assets/breakroom.png"><span>  The Break Room  </span></button>
+                <button class="tablinks" onclick="openTab(event, 'Tab3')"><img class="tabimage" src="index_assets/library.png"><span>  The Library  </span></button>
+                <button class="tablinks" onclick="openTab(event, 'Tab4')"><img class="tabimage" src="index_assets/cupboard.png"><span>  The Cupboard  </span></button>
+                <button class="tablinks" onclick="openTab(event, 'Tab5')"><img class="tabimage" src="index_assets/mailroom.png"><span>  The Mail Room  </span></button>
+            </div>
+
+            <div class="content">
+
+                <div class="defaultcontent">
+                    <h1>Welcome</h1>
+                    <p>Now click something or leave.</p>
+                    <a href="https://lordstanleyfour.github.io/">Go to old site</a>
+                </div>
+
+                <div id="Tab1" class="tabcontent">
+                    <h1>The Darkroom</h1>
+                    <h3>Interactive learning resources</h3>
+                    <p>Learn bony anatomy from X-ray images - hover over the bones to display the names in learning mode, then test your knowledge and retention in study mode.</p>
+                    <img id="darkroomimage" src="index_assets/darkroomimage.jpg">
+                    <div>
+                        <a href="content/darkroom/darkroom.html">Enter the Darkroom</a>
+                        <p><!--empty to extend parent div--></p>
+                    </div>            
+                </div>
+
+                <div id="Tab2" class="tabcontent">
+                    <h1>The Breakroom</h1>
+                    <p>Browser games, some radiology themed, some animal themed, some so vile that you'll wonder whether you'll be on a list afterwards.</p>
+                    <p>(Spoiler - you will be.  The COOL PEOPLE list!)</p>
+                    <img id="breakroomimage" src="index_assets/breakroomimage.jpg">
+                    <div>
+                        <a href="content/breakroom/breakroom.html">Enter the Beakroom</a>
+                        <p><!--empty to extend parent div--></p>
+                    </div>
+                </div>
+
+                <div id="Tab3" class="tabcontent">
+                    <h1>The Library</h1>
+                    <p>Useful reading materials.  Chances are, if you end up in here, you're both well clever and extremely good-looking.  Probably also with great hair.</p>
+                    <div>
+                        <a href="content/library/library.html">Enter the Library</a>
+                        <p><!--empty to extend parent div--></p>
+                    </div>
+                </div>
+
+                <div id="Tab4" class="tabcontent">
+                    <h1>The Cupboard</h1>
+                    <p>A nice little cubby to store works in progress, as well as things which aren't useful but would be too emotionally crippling to throw away.</p>
+                    <div>
+                        <a href="content/cupboard/cupboard.html">Enter the Cupboard</a>
+                        <p><!--empty to extend parent div--></p>
+                    </div>
+                </div>
+
+                <div id="Tab5" class="tabcontent">
+                    <h1>The Mail Room</h1>
+                    <p>Get in touch.  Ideas for future projects, feedback, bug reports and complaints about life are all welcome.</p>
+                    <p>I set up a special e-mail and everything, go ahead and make it worthwhile.</p>
+                    <div>
+                        <a href="content/mailroom/mailrooom.html">Enter the Mail Room</a>
+                        <p><!--empty to extend parent div--></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <p>This is a footer which contains niche information few give any hint of a shit about</p>
+            </div>
+
+            <script>            
+                function openTab(e, tabName) {
+                    let i, tabcontent, tablinks, defaultcontent;
+                    //hide default content
+                    defaultcontent = document.getElementsByClassName('defaultcontent');
+                    for (i=0; i < defaultcontent.length; i++){
+                        defaultcontent[i].style.display = 'none';
+                    }
+
+                    tabcontent = document.getElementsByClassName('tabcontent');
+                    //set display to none to hide what isn't selected when another selection made
+                    for (i = 0; i < tabcontent.length; i++){
+                        tabcontent[i].style.display = 'none';
+                    }
+                    //remove active class from all tabs to reset things
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    //display the clicked tab and set attribute to active
+                    document.getElementById(tabName).style.display = "block";                
+                    e.currentTarget.className += " active";
+                    //if logo clicked
+                    
+                }
+                
+                function closeTab(e) {
+                    let i, tabcontent, tablinks, defaultcontent;
+                    tabcontent = document.getElementsByClassName('tabcontent');
+                    //set display to none to hide what isn't selected when another selection made
+                    for (i = 0; i < tabcontent.length; i++){
+                        tabcontent[i].style.display = 'none';
+                    }
+                    //remove active class from all tabs to reset things
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    //show default content
+                    defaultcontent = document.getElementsByClassName('defaultcontent');
+                    for (i=0; i < defaultcontent.length; i++){
+                        defaultcontent[i].style.display = 'block';
+                    }    
+                }
+            </script>
+
+        </div>
+
+        <canvas id="canvas1"></canvas>
+        <script src="rainbowtrail.js"></script>
+
+    
+        
+    </body>
+
+    </html>
+
