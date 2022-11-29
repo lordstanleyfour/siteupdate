@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>MCQ game</title>
+		
+	</head>
+
+    <body>
+		<canvas id="loadingCanvas"></canvas>
+		
+		<h1 id="loading">Loading Assets, please wait.  This might take a few seconds</h1>
+
+		<script>
+			let canvas = document.getElementById('loadingCanvas');
+			let ctx = canvas.getContext('2d');
+			let completeLoad = false;
+			canvas.width = 300;
+			canvas.height = 50;
+			ctx.fillStyle = 'yellow';
+			ctx.strokeStyle = 'black';
+			ctx.font = '20px Verdana';
+			ctx.textAlign = 'center';
+		</script>
+	    
+		<img id="backdrop" src="Assets/backdrop.png">
+		<img id="tank" src="Assets/tanknew.png">
+		<img id="categorybox" src="Assets/categorybox.png">
+		<img id="panel" src="Assets/panel.png">
+		<img id="pipes" src="Assets/pipes.png" onload="firstLoad()">
+
+		<script>
+			function firstLoad(){
+				ctx.fillRect(0, 0, .2*canvas.width, canvas.height);
+				ctx.strokeText('some', .2*canvas.width/2, canvas.height/3);
+			}			
+		</script>
+
+		<img id="anatomy" src="Assets/anatomy.png">
+		<img id="physics" src="Assets/physics.png">
+		<img id="pathology" src="Assets/pathology.png">
+		<img id="radspertise" src="Assets/radspertise.png">
+		<img id="dailymail" src="Assets/dailymail.png">
+		<img id="watch" src="Assets/watch.png">
+		<img id="pointer" src="Assets/pointer.png">
+		<img id="pointerangry" src="Assets/pointerangry.png">
+		<img id="lastchancepointer" src="Assets/lastchancepointer.png">
+		<img id="mosher" src="Assets/moshspritesheet.png">
+		<img id="pointerSprite" src="Assets/pointersprite.png">
+		<img id="disappointed" src="Assets/disappointed.png">
+		<img id="winPointerSprite" src="Assets/winpointerspritesheet.png" onload="secondLoad()">
+
+		<script>
+			function secondLoad(){
+				ctx.fillRect(.2*canvas.width, 0, .2*canvas.width, canvas.height);
+				ctx.strokeText('a bit', .6*canvas.width/2, canvas.height/1.25);
+			}
+		</script>
+
+		<img id="good1" src="Assets/good1.png">
+		<img id="good2" src="Assets/good2.png">
+		<img id="good3" src="Assets/good3.png">
+		<img id="good4" src="Assets/good4.png">
+		<img id="good5" src="Assets/good5.png">
+		<img id="good6" src="Assets/good6.png">
+		<img id="good7" src="Assets/good7.png">
+		<img id="good8" src="Assets/good8.png">
+		<img id="good9" src="Assets/good9.png">
+		<img id="good10" src="Assets/good10.png">
+		<img id="good11" src="Assets/good11.png">
+		<img id="good12" src="Assets/good12.png">
+		<img id="good13" src="Assets/good13.png">
+		<img id="good14" src="Assets/good14.png">
+		<img id="good15" src="Assets/good15.png">
+		<img id="good16" src="Assets/good16.png">
+		<img id="good17" src="Assets/good17.png">
+		<img id="good18" src="Assets/good18.png">
+		<img id="good19" src="Assets/good19.png">
+		<img id="good20" src="Assets/good20.png">
+		<img id="good21" src="Assets/good21.png">
+		<img id="good22" src="Assets/good22.png">
+		<img id="good23" src="Assets/good23.png">
+		<img id="good24" src="Assets/good24.png">
+		<img id="good25" src="Assets/good25.png" onload="thirdLoad()">
+
+		<script>
+			function thirdLoad(){
+				ctx.fillRect(.4*canvas.width, 0, .2*canvas.width, canvas.height);
+				ctx.strokeText('more', canvas.width/2, canvas.height/2.2);
+			}
+		</script>
+
+		<img id="good26" src="Assets/good26.png">
+		<img id="good27" src="Assets/good27.png">
+		<img id="good28" src="Assets/good28.png">
+		<img id="good29" src="Assets/good29.png">
+		<img id="good30" src="Assets/good30.png">
+		<img id="good31" src="Assets/good31.png">
+		<img id="good32" src="Assets/good32.png">
+		<img id="good33" src="Assets/good33.png">
+		<img id="good34" src="Assets/good34.png">
+		<img id="good35" src="Assets/good35.png">
+		<img id="good36" src="Assets/good36.png">
+		<img id="good37" src="Assets/good37.png">
+		<img id="good38" src="Assets/good38.png">
+		<img id="good39" src="Assets/good39.png">
+		<img id="good40" src="Assets/good40.png">
+		<img id="good41" src="Assets/good41.png">
+		<img id="good42" src="Assets/good42.png">
+		<img id="good43" src="Assets/good43.png" onload="fourthLoad()">
+
+		<script>
+			function fourthLoad(){
+				ctx.fillRect(.6*canvas.width, 0, .2*canvas.width, canvas.height);
+				ctx.strokeText('nearly', 1.38*canvas.width/2, canvas.height/1.2);
+			}
+		</script>
+
+		<img id="bad1" src="Assets/bad1.png">
+		<img id="bad2" src="Assets/bad2.png">
+		<img id="bad3" src="Assets/bad3.png">
+		<img id="bad4" src="Assets/bad4.png">
+		<img id="bad5" src="Assets/bad5.png">
+		<img id="bad6" src="Assets/bad6.png">
+		<img id="bad7" src="Assets/bad7.png">
+		<img id="bad8" src="Assets/bad8.png">
+		<img id="bad9" src="Assets/bad9.png">
+		<img id="bad10" src="Assets/bad10.png">
+		<img id="bad11" src="Assets/bad11.png">
+		<img id="bad12" src="Assets/bad12.png">
+		<img id="bad13" src="Assets/bad13.png">
+		<img id="bad14" src="Assets/bad14.png">
+		<img id="bad15" src="Assets/bad15.png">
+		<img id="bad16" src="Assets/bad16.png">
+		<img id="bad17" src="Assets/bad17.png">
+		<img id="bad18" src="Assets/bad18.png">
+		<img id="bad19" src="Assets/bad19.png">
+		<img id="bad20" src="Assets/bad20.png" onload="fifthLoad()">
+
+		<script>
+			function fifthLoad(){
+				ctx.fillRect(.8*canvas.width, 0, .2*canvas.width, canvas.height);
+				ctx.strokeText('yay!', 1.8*canvas.width/2, canvas.height/2);
+			}
+		</script>
+
+		<img id="bad21" src="Assets/bad21.png">
+		<img id="bad22" src="Assets/bad22.png">
+		<img id="bad23" src="Assets/bad23.png">
+		<img id="bad24" src="Assets/bad24.png">
+		<img id="bad25" src="Assets/bad25.png">
+		<img id="bad26" src="Assets/bad26.png">
+		<img id="bad27" src="Assets/bad27.png">
+		<img id="bad28" src="Assets/bad28.png">
+		<img id="bad29" src="Assets/bad29.png">
+		<img id="bad30" src="Assets/bad30.png">
+		<img id="bad31" src="Assets/bad31.png">
+		<img id="bad32" src="Assets/bad32.png">
+		<img id="bad33" src="Assets/bad33.png">
+		<img id="bad34" src="Assets/bad34.png">
+		<img id="bad35" src="Assets/bad35.png" onload="fullLoad()">
+
+		<script>
+			function fullLoad(){
+				ctx.fillRect(1*canvas.width, 0, .2*canvas.width, canvas.height);
+				completeLoad = true;
+				if (completeLoad) canvas.style.display = 'none';
+			}
+		</script>
+	    
+        <canvas id="canvas1"></canvas>
+		<script></script>
+        <script src="script.js"></script>
+
+
+    </body>
+</html>
